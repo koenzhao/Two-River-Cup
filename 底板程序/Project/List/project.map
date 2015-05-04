@@ -1,4 +1,4 @@
-ARM Linker, 4.1 [Build 567] [Evaluation]
+ARM Linker, 4.1 [Build 567] [Standard]
 
 ==============================================================================
 
@@ -586,20 +586,20 @@ Image Symbol Table
     fac_ms                                   0x20000016   Data           2  delay.o(.data)
     .data                                    0x20000018   Section       12  usart.o(.data)
     .data                                    0x20000028   Section      172  jiaodu.o(.data)
-    DataBuffer                               0x20000048   Data           2  jiaodu.o(.data)
-    x_DataBuffer                             0x2000004a   Data           2  jiaodu.o(.data)
-    y_DataBuffer                             0x2000004c   Data           2  jiaodu.o(.data)
-    z_DataBuffer                             0x2000004e   Data           2  jiaodu.o(.data)
-    P                                        0x20000050   Data          16  jiaodu.o(.data)
-    q_bias                                   0x20000060   Data           4  jiaodu.o(.data)
-    angle_err                                0x20000064   Data           4  jiaodu.o(.data)
-    PCt_0                                    0x20000068   Data           4  jiaodu.o(.data)
-    PCt_1                                    0x2000006c   Data           4  jiaodu.o(.data)
-    K_1                                      0x20000070   Data           4  jiaodu.o(.data)
-    t_0                                      0x20000074   Data           4  jiaodu.o(.data)
-    t_1                                      0x20000078   Data           4  jiaodu.o(.data)
-    E                                        0x2000007c   Data           4  jiaodu.o(.data)
-    K_0                                      0x20000080   Data           4  jiaodu.o(.data)
+    DataBuffer                               0x2000004c   Data           2  jiaodu.o(.data)
+    x_DataBuffer                             0x2000004e   Data           2  jiaodu.o(.data)
+    y_DataBuffer                             0x20000050   Data           2  jiaodu.o(.data)
+    z_DataBuffer                             0x20000052   Data           2  jiaodu.o(.data)
+    P                                        0x20000054   Data          16  jiaodu.o(.data)
+    q_bias                                   0x20000064   Data           4  jiaodu.o(.data)
+    angle_err                                0x20000068   Data           4  jiaodu.o(.data)
+    PCt_0                                    0x2000006c   Data           4  jiaodu.o(.data)
+    PCt_1                                    0x20000070   Data           4  jiaodu.o(.data)
+    K_1                                      0x20000074   Data           4  jiaodu.o(.data)
+    t_0                                      0x20000078   Data           4  jiaodu.o(.data)
+    t_1                                      0x2000007c   Data           4  jiaodu.o(.data)
+    E                                        0x20000080   Data           4  jiaodu.o(.data)
+    K_0                                      0x20000084   Data           4  jiaodu.o(.data)
     .data                                    0x200000d4   Section      256  pazzy.o(.data)
     .data                                    0x200001d4   Section        1  init.o(.data)
     .data                                    0x200001d8   Section        8  control.o(.data)
@@ -1106,29 +1106,29 @@ Image Symbol Table
     g_fAngle_Dot                             0x2000002c   Data           4  jiaodu.o(.data)
     g_nStandCtrOut                           0x20000030   Data           2  jiaodu.o(.data)
     kp                                       0x20000034   Data           4  jiaodu.o(.data)
-    speedL                                   0x20000038   Data           4  jiaodu.o(.data)
-    speedR                                   0x2000003c   Data           4  jiaodu.o(.data)
-    sudu_p                                   0x20000040   Data           4  jiaodu.o(.data)
-    weizhi_p                                 0x20000044   Data           4  jiaodu.o(.data)
-    Accel_x                                  0x20000084   Data           2  jiaodu.o(.data)
-    Accel_y                                  0x20000086   Data           2  jiaodu.o(.data)
-    Accel_z                                  0x20000088   Data           2  jiaodu.o(.data)
-    iGyro_y                                  0x2000008a   Data           2  jiaodu.o(.data)
-    Angle                                    0x2000008c   Data           4  jiaodu.o(.data)
-    Gyro_y                                   0x20000090   Data           4  jiaodu.o(.data)
-    Angle_ax                                 0x20000094   Data           4  jiaodu.o(.data)
-    Angle_gy                                 0x20000098   Data           4  jiaodu.o(.data)
-    Gyro                                     0x2000009c   Data           4  jiaodu.o(.data)
-    speedl                                   0x200000a0   Data           4  jiaodu.o(.data)
-    speedr                                   0x200000a4   Data           4  jiaodu.o(.data)
-    jiaodu_PWM                               0x200000a8   Data           4  jiaodu.o(.data)
-    speed_right                              0x200000ac   Data           4  jiaodu.o(.data)
-    speed_left                               0x200000b0   Data           4  jiaodu.o(.data)
-    RotateError                              0x200000b4   Data           4  jiaodu.o(.data)
-    IRotateError                             0x200000b8   Data           4  jiaodu.o(.data)
-    RotateCompen                             0x200000bc   Data           4  jiaodu.o(.data)
-    fSpeed_Vechile                           0x200000c0   Data           4  jiaodu.o(.data)
-    fSpeed_Vechile_F                         0x200000c4   Data           4  jiaodu.o(.data)
+    fSpeed_Vechile_F                         0x20000038   Data           4  jiaodu.o(.data)
+    speedL                                   0x2000003c   Data           4  jiaodu.o(.data)
+    speedR                                   0x20000040   Data           4  jiaodu.o(.data)
+    sudu_p                                   0x20000044   Data           4  jiaodu.o(.data)
+    weizhi_p                                 0x20000048   Data           4  jiaodu.o(.data)
+    Accel_x                                  0x20000088   Data           2  jiaodu.o(.data)
+    Accel_y                                  0x2000008a   Data           2  jiaodu.o(.data)
+    Accel_z                                  0x2000008c   Data           2  jiaodu.o(.data)
+    iGyro_y                                  0x2000008e   Data           2  jiaodu.o(.data)
+    Angle                                    0x20000090   Data           4  jiaodu.o(.data)
+    Gyro_y                                   0x20000094   Data           4  jiaodu.o(.data)
+    Angle_ax                                 0x20000098   Data           4  jiaodu.o(.data)
+    Angle_gy                                 0x2000009c   Data           4  jiaodu.o(.data)
+    Gyro                                     0x200000a0   Data           4  jiaodu.o(.data)
+    speedl                                   0x200000a4   Data           4  jiaodu.o(.data)
+    speedr                                   0x200000a8   Data           4  jiaodu.o(.data)
+    jiaodu_PWM                               0x200000ac   Data           4  jiaodu.o(.data)
+    speed_right                              0x200000b0   Data           4  jiaodu.o(.data)
+    speed_left                               0x200000b4   Data           4  jiaodu.o(.data)
+    RotateError                              0x200000b8   Data           4  jiaodu.o(.data)
+    IRotateError                             0x200000bc   Data           4  jiaodu.o(.data)
+    RotateCompen                             0x200000c0   Data           4  jiaodu.o(.data)
+    fSpeed_Vechile                           0x200000c4   Data           4  jiaodu.o(.data)
     fPosition                                0x200000c8   Data           8  jiaodu.o(.data)
     sudu_pwm                                 0x200000d0   Data           4  jiaodu.o(.data)
     PFF                                      0x200000d4   Data          16  pazzy.o(.data)
@@ -1155,9 +1155,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000572c, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x0000559c])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000572c, Max: 0x00020000, ABSOLUTE, COMPRESSED[0x0000559c])
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00005538, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00005538, Max: 0x00020000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1285,7 +1285,7 @@ Memory Map of the image
     0x08005518   0x00000020   Data   RO          699    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000928, Max: 0x0000c000, ABSOLUTE, COMPRESSED[0x00000064])
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000928, Max: 0x00005000, ABSOLUTE, COMPRESSED[0x00000064])
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1313,28 +1313,28 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        36         12          0          8          0        727   control.o
-       160          8          0          4          0        923   delay.o
-       380         16          0          0          0       1369   encoder.o
-       764         38          0          1          0       1945   init.o
-      2220        282          0        172        208       4760   jiaodu.o
-        56         18          0          0          0     260831   main.o
-       248         30          0          0          0       1761   misc.o
-       824         26          0          0          0       2170   mpu6050.o
-      2004         28          0        256          0       1771   pazzy.o
-        64         26        304          0       1536        832   startup_stm32f10x_hd.o
-       856         40          0          0          0       5685   stm32f10x_gpio.o
-      1008         16          0          0          0       9147   stm32f10x_i2c.o
-        76          6          0          0          0       1354   stm32f10x_it.o
-       932         52          0         20          0       8820   stm32f10x_rcc.o
-      3502         86          0          0          0      22856   stm32f10x_tim.o
-      1036         20          0          0          0       8436   stm32f10x_usart.o
-       362         38          0          0          0       1416   sys.o
-       456         36          0         20          0       1675   system_stm32f10x.o
-       324         22          0         12          0       3241   usart.o
+        36         12          0          8          0        707   control.o
+       160          8          0          4          0        899   delay.o
+       380         16          0          0          0       1361   encoder.o
+       764         38          0          1          0       1929   init.o
+      2220        282          0        172        208       4724   jiaodu.o
+        56         18          0          0          0     260755   main.o
+       248         30          0          0          0       1745   misc.o
+       824         26          0          0          0       2154   mpu6050.o
+      2004         28          0        256          0       1743   pazzy.o
+        64         26        304          0       1536        824   startup_stm32f10x_hd.o
+       856         40          0          0          0       5669   stm32f10x_gpio.o
+      1008         16          0          0          0       9127   stm32f10x_i2c.o
+        76          6          0          0          0       1342   stm32f10x_it.o
+       932         52          0         20          0       8792   stm32f10x_rcc.o
+      3502         86          0          0          0      22840   stm32f10x_tim.o
+      1036         20          0          0          0       8416   stm32f10x_usart.o
+       362         38          0          0          0       1396   sys.o
+       456         36          0         20          0       1647   system_stm32f10x.o
+       324         22          0         12          0       3213   usart.o
 
     ----------------------------------------------------------------------
-     15312        800        336        500       1744     339719   Object Totals
+     15312        800        336        500       1744     339283   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          0          7          0          1   (incl. Padding)
 
@@ -1418,8 +1418,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     21400       1224        416        500       1844     339676   Grand Totals
-     21400       1224        416        100       1844     339676   ELF Image Totals (compressed)
+     21400       1224        416        500       1844     339240   Grand Totals
+     21400       1224        416        100       1844     339240   ELF Image Totals (compressed)
      21400       1224        416        100          0          0   ROM Totals
 
 ==============================================================================

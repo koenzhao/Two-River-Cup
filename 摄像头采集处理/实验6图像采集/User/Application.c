@@ -28,7 +28,9 @@ void Application(void)
 			//PIC_Process_2();
 
 			//通过串口发送图片信息
-			Send_Pic();
+			//Send_Pic();
+			USART_SendData(USART1,Curve_Value);
+			
 			//状态转移
 			OV_State=Wait_Vsync1;
 			//开启中断

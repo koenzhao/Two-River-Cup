@@ -149,72 +149,72 @@ uint8_t I2C_ReadByte(uint8_t REG_Address)
 
 void I2C_ReadBuffer(uint8_t* Data_Buffer, uint8_t REG_Address, uint8_t Num_Byte)
 {  
-  //*((u8 *)0x4001080c) |=0x80; 
-  while(I2C_GetFlagStatus(I2C2, I2C_FLAG_BUSY)); // Added by Najoua 27/08/2008
+	//*((u8 *)0x4001080c) |=0x80; 
+  	while(I2C_GetFlagStatus(I2C2, I2C_FLAG_BUSY)); // Added by Najoua 27/08/2008
     
     
-  /* Send START condition */
-  I2C_GenerateSTART(I2C2, ENABLE);
-  //*((u8 *)0x4001080c) &=~0x80;
+  	/* Send START condition */
+  	I2C_GenerateSTART(I2C2, ENABLE);
+  	//*((u8 *)0x4001080c) &=~0x80;
   
-  /* Test on EV5 and clear it */
-  while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT));
+  	/* Test on EV5 and clear it */
+  	while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT));
 
-  /* Send EEPROM address for write */
-  I2C_Send7bitAddress(I2C2, I2C2_MPU6050, I2C_Direction_Transmitter);
+  	/* Send EEPROM address for write */
+  	I2C_Send7bitAddress(I2C2, I2C2_MPU6050, I2C_Direction_Transmitter);
 
-  /* Test on EV6 and clear it */
-  while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
+  	/* Test on EV6 and clear it */
+  	while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED));
   
-  /* Clear EV6 by setting again the PE bit */
-  I2C_Cmd(I2C2, ENABLE);
+  	/* Clear EV6 by setting again the PE bit */
+  	I2C_Cmd(I2C2, ENABLE);
 
-  /* Send the EEPROM's internal address to write to */
-  I2C_SendData(I2C2, REG_Address);  
+  	/* Send the EEPROM's internal address to write to */
+  	I2C_SendData(I2C2, REG_Address);  
 
-  /* Test on EV8 and clear it */
-  while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
+  	/* Test on EV8 and clear it */
+  	while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
   
-  /* Send STRAT condition a second time */  
-  I2C_GenerateSTART(I2C2, ENABLE);
+  	/* Send STRAT condition a second time */  
+  	I2C_GenerateSTART(I2C2, ENABLE);
   
-  /* Test on EV5 and clear it */
-  while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT));
+ 	/* Test on EV5 and clear it */
+  	while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT));
   
-  /* Send EEPROM address for read */
-  I2C_Send7bitAddress(I2C2, I2C2_MPU6050, I2C_Direction_Receiver);
+  	/* Send EEPROM address for read */
+  	I2C_Send7bitAddress(I2C2, I2C2_MPU6050, I2C_Direction_Receiver);
   
-  /* Test on EV6 and clear it */
-  while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
+  	/* Test on EV6 and clear it */
+  	while(!I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
   
-  /* While there is data to be read */
-  while(Num_Byte)  
-  {
-    if(Num_Byte == 1)
-    {
-      /* Disable Acknowledgement */
-      I2C_AcknowledgeConfig(I2C2, DISABLE);
+  	/* While there is data to be read */
+  	while(Num_Byte)  
+  	{
+    	if(Num_Byte == 1)
+    	{
+      		/* Disable Acknowledgement */
+      		I2C_AcknowledgeConfig(I2C2, DISABLE);
       
-      /* Send STOP Condition */
-      I2C_GenerateSTOP(I2C2, ENABLE);
-    }
+      		/* Send STOP Condition */
+      		I2C_GenerateSTOP(I2C2, ENABLE);
+    	}
 
-    /* Test on EV7 and clear it */
-    if(I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_RECEIVED))  
-    {      
-      /* Read a byte from the EEPROM */
-      *Data_Buffer = I2C_ReceiveData(I2C2);
+    	/* Test on EV7 and clear it */
+    	if(I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_RECEIVED))  
+    	{      
+      		/* Read a byte from the EEPROM */
+      		*Data_Buffer = I2C_ReceiveData(I2C2);
 
-      /* Point to the next location where the byte read will be saved */
-      Data_Buffer++; 
+      		/* Point to the next location where the byte read will be saved */
+      		Data_Buffer++; 
       
-      /* Decrement the read bytes counter */
-      Num_Byte--;        
-    }   
-  }
+      		/* Decrement the read bytes counter */
+      		Num_Byte--;        
+    	}   
+  	}
 
-  /* Enable Acknowledgement to be ready for another reception */
-  I2C_AcknowledgeConfig(I2C2, ENABLE);
+  	/* Enable Acknowledgement to be ready for another reception */
+  	I2C_AcknowledgeConfig(I2C2, ENABLE);
 	//I2C_EE_WaitEepromStandbyState();
 }
 

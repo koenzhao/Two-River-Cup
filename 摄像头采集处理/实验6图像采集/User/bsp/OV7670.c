@@ -1,6 +1,7 @@
 #include"includes.h"
 
 uint8_t PIC[R][C];
+int Mid_Line[R]={0};
 uint8_t PIC_Smooth[R][C]={0};
 uint8_t PIC_Outline[R][C]={0};
 uint8_t PIC_erzhihua[C];
@@ -11,7 +12,9 @@ u16 TrueLine;
 u8 datareadyflag=0;
 int left,right,data_last,data;
 int left_flag,right_flag;
-//int Threshold = 0;
+int Threshold = 100;
+uint8_t y[R]={80};
+uint8_t Curve_Value = 0;
 
 
 /*
@@ -304,7 +307,7 @@ void Read_Pic(void)
 {
 	u16 i,j;
 	u16 t1,t2;
-//以下代码完成，图像的采集，并显示在tft上				 							
+	//以下代码完成，图像的采集，并显示在tft上				 							
 	for(i = 0; i < 240; i ++)	 
 	{	
 		 if(i%6==1)
@@ -348,6 +351,12 @@ void Read_Pic(void)
 	}
 	FIFO_OE_H;		 	  //禁止FIFO输出
 }
+/*************************************************************
+函数名：void Send_Pic(void)
+功能：通过串口发送图片
+输入：无
+输出：无
+*************************************************************/
 void Send_Pic(void)
 {
 	u8 i;
@@ -381,7 +390,7 @@ void Send_Pic(void)
 *白跳变沿进行两边的记录。这时候有四种情况，1）两条线都找到。2）
 *只有左边线。3）只有右边线。4）两边线都没有。
 *********************************************************************/
-void V_control(uint8_t (*p)[160])
+/*void V_control(uint8_t (*p)[160])
 {
 	int hang,lie;
   	for(hang=39;hang>0;hang--)
@@ -444,7 +453,7 @@ void V_control(uint8_t (*p)[160])
   			while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);	 
 		}
 	}    
-}
+}*/
 
 /****************************************************************************
 函数名：PIC_Process()
@@ -454,35 +463,155 @@ void V_control(uint8_t (*p)[160])
 
 void PIC_Process()
 {
-	int i=0;
-	int j=0;
-	//Threshold = Get_GrayValue();
-	for (i = R-1; i>=0; i--)//处理第i行
+	int end = R-5;
+	int start = end-7;
+	TwoValue_Process();
+	Get_MidLine();
+	SmoothMid();
+   	for (;start>=4;start -= 6, end -= 6)
 	{
-		for (j = 0; j<C; j++)//二值化
+		Least_Squares(start, end);
+	}
+	Curve_Value = Curve();
+	Display_MidLine();
+}
+
+/****************************************************************************
+函数名：void TwoValue_Process(void)
+功能：二值化，滤波
+备注：2015年4月26日添加
+****************************************************************************/
+void TwoValue_Process(void)
+{
+	int row=0;
+	int col=0;
+	Threshold = Get_GrayValue(); //获得计算后的灰度阈值
+	for (row = R-1; row>=0; row--)//处理第row行
+	{
+		for (col = 0; col<C; col++)//二值化
 		{
-			if(PIC[i][j] >= Threshold)
+			if(PIC[row][col] >= Threshold)
 			{
-				PIC[i][j] = white;
+				PIC[row][col] = white;
 			}
 			else 
 			{
-				PIC[i][j] = black;
+				PIC[row][col] = black;
 			}
 		}
-		for(j=1; j<C-1; j++)//滤波
+		for(col=1; col<C-1; col++)//滤波
 		{
-			if( PIC[i][j-1]==white && PIC[i][j]==black && PIC[i][j+1]==white )
+			if( PIC[row][col-1]==white && PIC[row][col]==black && PIC[row][col+1]==white )
 			{
-				PIC[i][j]=white;
+				PIC[row][col]=white;
 			}
-			else if( PIC[i][j-1]==black && PIC[i][j]==white && PIC[i][j+1]==black )
+			else if( PIC[row][col-1]==black && PIC[row][col]==white && PIC[row][col+1]==black )
 			{
-				PIC[i][j]=black;
+				PIC[row][col]=black;
 			}
 		}
 	}
 }
+
+/*********************************************************************
+函数名：显示中线黑线
+功能：在PIC图像中显示中线黑线
+输入：无
+输出：无
+备注：2015年4月28日赵冬阳添加
+*********************************************************************/
+void Display_MidLine()
+{
+	int row;
+	for (row=R-1;row>=0;row--)
+	{
+		PIC[row][Mid_Line[row]]=black;
+	}
+}
+
+
+
+/*********************************************************************
+函数名：void Get_MidLine()
+功能：获取图像中心线
+输出：无
+输出：无
+备注：2015年4月28日赵冬阳添加
+*********************************************************************/
+void Get_MidLine()
+{
+	int row = 0;
+	int col = 0;
+	int Left_Border = 0;
+	int Right_Border = 0;
+	short int Left_Find = 0;
+	short int Right_Find = 0;
+
+	for(row=R-1;row>=0;row--)
+	{
+		if(row>=30)//前10行处理
+		{
+			for(col=39;col>=0;col--)
+			{
+				if((PIC[row][col]==black) && !Left_Find)
+				{
+					Left_Border = col;
+					if(PIC[row][col-1]==black)
+					{
+						Left_Find = 1;
+					}
+				}
+				if(PIC[row][C-1-col]==black && !Right_Find)
+				{
+					Right_Border = (C-1-col);
+					if(PIC[row][C-2-col]==black)
+					{
+							Right_Find = 1;
+					}
+				}
+				if(Left_Find && Right_Find)
+					break;
+			}
+			if(Left_Find == 0)
+				Left_Border = 0;
+			if(Right_Find == 0)
+				Right_Border = 160;
+		}
+		else	//后30行处理
+		{
+			for(col=79;col>=0;col--)
+			{
+				if((PIC[row][col]==black) && !Left_Find)
+				{
+					Left_Border = col;
+					if(PIC[row][col-1]==black)
+					{
+						Left_Find = 1;
+					}
+				}
+				if(PIC[row][C-1-col]==black && !Right_Find)
+				{
+					Right_Border = (C-1-col);
+					if(PIC[row][C-1-col-1]==black)
+					{
+						 Right_Find = 1;
+					}
+				}
+				if(Left_Find && Right_Find)
+					break;
+			}
+			if(Left_Find == 0)
+				Left_Border = 0;
+			if(Right_Find == 0)
+				Right_Border = 160;
+		}
+		Mid_Line[row]=(Left_Border+Right_Border)/2;
+		Left_Find = 0;
+		Right_Find = 0;
+	}
+}
+
+
 
 /**********************************************************************
 函数名：void PIC_Process_2(void)
@@ -491,7 +620,7 @@ void PIC_Process()
 功能：处理图像，包括图像平滑，锐化，二值化
 备注：2015年4月27日赵冬阳添加
 **********************************************************************/
-void PIC_Process_2(void)
+/*void PIC_Process_2(void)
 {
 	  int i = 0;
 	  int j = 0;
@@ -528,7 +657,7 @@ void PIC_Process_2(void)
 			sum = 0;
 		}
 	  }
-	  /*图像锐化算法*/
+	  //图像锐化算法
 	  for(row=0;row<R;row++)
 	  {
 	  	for(col=0;col<C;col++)
@@ -551,6 +680,134 @@ void PIC_Process_2(void)
 			}
 		}
 	  }
+}  */
+
+
+/***************************************************
+函数名：int8_t Abs8(int8_t a)
+功能：求8位数据的绝对值
+输入：a
+输出：temp
+备注：2015年5月3日添加
+***************************************************/
+int8_t Abs8(int8_t a)
+{
+	int8_t temp;
+	temp=a;
+	if (temp<=0)
+	{
+		temp = -temp;
+	}
+  	return temp;
+}
+
+
+/**********************************************************************
+函数名：SmoothMid(void)
+功能：平滑曲线
+输入：无
+输出：无
+备注：2015年5月3日添加
+**********************************************************************/
+void SmoothMid(void)
+{
+	uint8_t  i;
+	uint8_t temp=0;
+	uint8_t temp1=0;
+ 	for (i=R-1;i>3;i--) 
+	{
+		if(Mid_Line[i] != Mid_Line[i-1])
+		{
+			temp = Abs8(Mid_Line[i-1]-Mid_Line[i]);
+		}
+		
+
+		if(Mid_Line[i] != Mid_Line[i+1])
+		{
+		 	temp1 = Abs8(Mid_Line[i+1]-Mid_Line[i]);
+		}
+		
+		if (((temp>5)&&(temp1>5)) || ((Mid_Line[i-1]<Mid_Line[i])&&(Mid_Line[i+1]<Mid_Line[i])) || ((Mid_Line[i-1]>Mid_Line[i])&&(Mid_Line[i+1]>Mid_Line[i])))	 
+		{
+			Mid_Line[i]=(Mid_Line[i-1]+Mid_Line[i+1])*0.5;
+		}
+	}
+}
+
+
+/****************************************************************************
+函数名：Least_Squares(int start, int end)
+功能：通过最小二乘法平滑中心线
+输入：start,end
+输出：无
+备注：2015年5月3日添加
+*****************************************************************************/
+void Least_Squares(int start, int end)
+{
+	uint8_t i=0;
+	double A=0, B=0, D=0, F=0, Delta;
+	
+	double a,b;
+	int t;
+
+	for (i=end;i>=start;i--)
+	{
+		//BlackLineData[i]=y[i];
+		y[i]=Mid_Line[i];
+	}
+
+	
+	for (i=start;i<=end;i++)
+	{
+		A += i*i; //pow(i,2)
+		B += i;
+ 		D += i*y[i];
+		F += y[i];
+	}
+	
+	t = end-start+1;
+	Delta = A*t-B*B;
+	a = (D*t-B*F)/Delta;
+	b = (A*F-D*B)/Delta;
+	
+	
+	for (i=start;i<=end;i++)
+	{
+		Mid_Line[i]=(a*i+b);
+	}
+	
+	A=0;
+	B=0;
+	D=0;
+	F=0;
+	
+	//y[]={0};
+}
+/*****************************************************************
+函数名：Curve(void)
+功能：计算曲率半径
+输入：无
+输出：无
+备注：s8 Curve(void)
+*****************************************************************/
+uint8_t Curve(void)
+{
+	int8_t i;
+	uint8_t sum_MidLine=0;
+	uint8_t average_MidLine=0;
+	uint8_t curve_MidLine=0;
+	uint8_t differ_MidLine=0;
+	for(i=25, sum_MidLine=0; i>=10; i--)
+	{
+		sum_MidLine+=Mid_Line[i];
+	}
+	average_MidLine = sum_MidLine / 16;
+	for(i=25, curve_MidLine=0;i>=10;i--)
+	{
+		differ_MidLine = Abs8(Mid_Line[i]-average_MidLine);
+		curve_MidLine += differ_MidLine;
+	}
+	return curve_MidLine;
 }
 
 /*******************************************************
@@ -573,6 +830,8 @@ int Get_GrayValue()
 	 int Init_GrayValue_Last = 0;//记录上一次计算的最初灰度阈值
 	 int Mean_GrayValue_1 = 0;//目标灰度平均阈值
 	 int Mean_GrayValue_2 = 0;//背景灰度平均阈值
+	 
+	 /*扫描整个图片，记录最小灰度阈值和最大灰度阈值*/
 	 for(row=0;row<R;row++)
 	 {
 	 	for(col=0;col<C;col++)
@@ -597,12 +856,12 @@ int Get_GrayValue()
 	 	{
 	 		for(col=0;col<C;col++)
 			{
-				if((Min_GrayValue<PIC[row][col])&&(PIC[row][col]<Init_GrayValue))
+				if((Min_GrayValue<PIC[row][col])&&(PIC[row][col]<Init_GrayValue))//从最小灰度阈值到最初灰度阈值
 				{
 					Obj_GrayValue += PIC[row][col];//此范围内灰度求和
 					Obj_Count++;//计数	
 				}
-				if((Init_GrayValue<PIC[row][col])&&(PIC[row][col]<Max_GrayValue))
+				if((Init_GrayValue<PIC[row][col])&&(PIC[row][col]<Max_GrayValue))//从最初灰度阈值到最大灰度阈值
 				{
 					Bla_GrayValue += PIC[row][col];//此范围内灰度求和
 					Bla_Count++;//计数
@@ -616,5 +875,4 @@ int Get_GrayValue()
 	 
 	 /*返回灰度阈值*/
 	 return Init_GrayValue;
-
 }

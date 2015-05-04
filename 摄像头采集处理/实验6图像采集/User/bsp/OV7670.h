@@ -88,7 +88,7 @@
 
 #define R	40
 #define C	160	  
-#define Threshold  100
+//#define Threshold  100
 #define white 254
 #define black 0
 void OV7670_Init(void);
@@ -100,12 +100,21 @@ extern void PIC_Process(void);
 extern void PIC_Process_2(void);
 void V_control(uint8_t (*p)[160]);
 extern int Get_GrayValue(void);
-
+void Display_MidLine(void);
+void Get_MidLine(void);
+void Get_MidLine(void);
+void SmoothMid(void);
+void Least_Squares(int start, int end);
+uint8_t Curve(void);
+int8_t Abs8(int8_t a);
+void TwoValue_Process(void);
 
 #define ADDR_OV7670   0x42	 
 extern uint8_t PIC[R][C];
 extern uint8_t PIC_Smooth[R][C];
 extern uint8_t PIC_Outline[R][C];
+extern uint8_t Curve_Value;
+
 
 typedef enum{
 Wait_Vsync1,

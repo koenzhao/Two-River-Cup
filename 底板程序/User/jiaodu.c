@@ -30,7 +30,7 @@ float jiaodu_PWM;
 float speed_right,speed_left,RotateError,IRotateError,RotateCompen;
 /*********速度闭环所需参数************/
 float fSpeed_Vechile; 
-float fSpeed_Vechile_F;
+float fSpeed_Vechile_F=0;
 double fPosition;
 float sudu_pwm;
 
@@ -71,20 +71,20 @@ int speedL=0;
 int speedR=0;
 void SpeedL(int SpeedL)
 {
-			if (SpeedL>3590) SpeedL=3590;
-			if (SpeedL<-3590) SpeedL=-3590;
+	if (SpeedL>3590) SpeedL=3590;
+	if (SpeedL<-3590) SpeedL=-3590;
 
-			TIM3->CCR1 = 3600+SpeedL;
-			TIM3->CCR2 = 3600-SpeedL;
+	TIM3->CCR1 = 3600+SpeedL;
+	TIM3->CCR2 = 3600-SpeedL;
 }
 
 void SpeedR(int SpeedR)
 {
-			if (SpeedR>3590) SpeedR=3590;
-			if (SpeedR<-3590) SpeedR=-3590;
+	if (SpeedR>3590) SpeedR=3590;
+	if (SpeedR<-3590) SpeedR=-3590;
 
-			TIM3->CCR3 = 3600+SpeedR;
-			TIM3->CCR4 = 3600-SpeedR;
+	TIM3->CCR3 = 3600+SpeedR;
+	TIM3->CCR4 = 3600-SpeedR;
 }
 /********************************************************************
                   加速度计数据滤波（内部调用）
@@ -138,7 +138,7 @@ void Angle_Calculate(void)
     Accel_y  = (short)((y_DataBuffer[0]<<8)+ y_DataBuffer[1]);	  //读取y轴加速度	
 	Accel_z  = (short)((z_DataBuffer[0]<<8)+ z_DataBuffer[1]);	  //读取z轴加速度	
 	//
-	iGyro_y  = (short)((DataBuffer[0]<<8)+DataBuffer[1]);    	 
+	iGyro_y  = (short)((DataBuffer[0]<<8)+DataBuffer[1]);		//读取x轴陀螺仪数据    	 
 	//滤波
 	acc_filter();
     //利用加速度计计算倾角
@@ -164,12 +164,13 @@ void pid_sudu(float p,float i,float d)
 	speed_left = Get_Speed_L();	 
 
 	fSpeed_Vechile = (speed_right+speed_left) * 0.5;
-	fSpeed_Vechile_F = fSpeed_Vechile_F * 0.7 + fSpeed_Vechile * 0.3;
+	fSpeed_Vechile_F = fSpeed_Vechile_F * 0.7 + fSpeed_Vechile * 0.3;//滤波
 	/*累加求位移*/
-	fPosition += fSpeed_Vechile_F;
+	fPosition += fSpeed_Vechile_F; //对速度进行积分求得位移
 	/*位移调节量*/
 	fPosition -= PWM_kongzhi;
 	/*位移限制,上下限待调节*/
+	/*减少小车悬空、空转对小车的影响*/
 	if(fPosition > 50000.0)                  //5000	
 	{																	
 		fPosition = 50000.0;
@@ -178,24 +179,25 @@ void pid_sudu(float p,float i,float d)
     {		
 		fPosition = -50000.0;
     }
-    RotateError   = speed_left - speed_right;
+    
+	RotateError   = speed_left - speed_right;
     IRotateError  += RotateError;
     RotateCompen  =  RotateError * 0.5 + IRotateError * 0.0;
 
     speed_right =0;		
     speed_left =0;
       
-    if((40.0>=Angle)&&(-40.0<=Angle))
+    if((40.0>=Angle)&&(-40.0<=Angle))//在Angle在[-40.0，40.0]区间内调节
     {
-    kp =p+ Fuzzy(g_fAngle,g_fAngle_Dot);
-    jiaodu_PWM = kp * (g_fAngle+1.5) + d * g_fAngle_Dot;
-    sudu_pwm = sudu_p * fSpeed_Vechile_F + weizhi_p * fPosition + RotateCompen;
-   }
-   else
-   {
-    jiaodu_PWM =0;
-	sudu_pwm = 0;
-   }   
+    	kp =p+ Fuzzy(g_fAngle,g_fAngle_Dot);  //模糊算法，不建议使用
+    	jiaodu_PWM = kp * (g_fAngle+1.5) + d * g_fAngle_Dot;
+    	sudu_pwm = sudu_p * fSpeed_Vechile_F + weizhi_p * fPosition + RotateCompen;
+   	}
+   	else
+   	{
+    	jiaodu_PWM =0;
+		sudu_pwm = 0;
+   	}   
 }
 /********************************************************************
                      电机累加函数（内部调用）
@@ -212,14 +214,15 @@ void PWM_out(void)
 		left_pwm_out+=DEAD;
    	else 
 		left_pwm_out-=(DEAD);
-
-   	if (right_pwm_out>0) 
+	if (right_pwm_out>0) 
 		right_pwm_out+=DEAD;
    	else 		   
    		right_pwm_out-=(DEAD);
 
     SpeedL(left_pwm_out);
     SpeedR(right_pwm_out);
+	//SpeedL(3500);
+	//SpeedR(3500);
   	
 }		  
 
@@ -290,8 +293,8 @@ void Kalman_Filter(float Angle_Kal,float Gyro_Kal)
 
 void upright_Adjust(float p,float i,float d)
 {
-  Angle_Calculate();//角速度 陀螺仪
-  pid_sudu(p,i,d);
-  PWM_out(); 
+  	Angle_Calculate();//角速度 陀螺仪
+  	pid_sudu(p,i,d);
+  	PWM_out(); 
    
 }

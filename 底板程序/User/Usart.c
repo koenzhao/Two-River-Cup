@@ -96,15 +96,15 @@ void USART1_IRQHandler(void)
 	USART_ClearITPendingBit(USART1,USART1_IRQn);//清除中断标志位
 	if(USART1->SR&(1<<5)) //如果是接收中断
 	{	
-	//	temp_data[data_i]= USART1->DR;;
+		//temp_data[data_i]= USART1->DR;;
 		temp_data11 = USART1->DR;;
 
 		speed_control(temp_data11,50,50);
 		data_i++;
-	//	if(3==data_i)
-	//	{
-	//		data_i = 0; 
-	//	}
+		//if(3==data_i)
+		//{
+			//data_i = 0; 
+		//}
 	}		
 }
 	
