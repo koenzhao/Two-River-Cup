@@ -105,7 +105,7 @@ void Get_MidLine(void);
 void Get_MidLine(void);
 void SmoothMid(void);
 void Least_Squares(int start, int end);
-uint8_t Curve(void);
+uint8_t Curve(uint8_t start, uint8_t end);
 int8_t Abs8(int8_t a);
 void TwoValue_Process(void);
 

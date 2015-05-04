@@ -472,7 +472,7 @@ void PIC_Process()
 	{
 		Least_Squares(start, end);
 	}
-	Curve_Value = Curve();
+	Curve_Value = Curve(10,30);
 	Display_MidLine();
 }
 
@@ -783,26 +783,27 @@ void Least_Squares(int start, int end)
 	
 	//y[]={0};
 }
+
 /*****************************************************************
 函数名：Curve(void)
 功能：计算曲率半径
 输入：无
-输出：无
-备注：s8 Curve(void)
+输出：curve_MidLine
+备注：2015年5月4日添加
 *****************************************************************/
-uint8_t Curve(void)
+uint8_t Curve(uint8_t start, uint8_t end)
 {
 	int8_t i;
 	uint8_t sum_MidLine=0;
 	uint8_t average_MidLine=0;
 	uint8_t curve_MidLine=0;
 	uint8_t differ_MidLine=0;
-	for(i=25, sum_MidLine=0; i>=10; i--)
+	for(i=end, sum_MidLine=0; i>=start; i--)
 	{
 		sum_MidLine+=Mid_Line[i];
 	}
-	average_MidLine = sum_MidLine / 16;
-	for(i=25, curve_MidLine=0;i>=10;i--)
+	average_MidLine = sum_MidLine / (end-start+1);
+	for(i=end, curve_MidLine=0;i>=start;i--)
 	{
 		differ_MidLine = Abs8(Mid_Line[i]-average_MidLine);
 		curve_MidLine += differ_MidLine;

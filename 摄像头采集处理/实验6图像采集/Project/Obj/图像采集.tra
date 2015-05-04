@@ -38,7 +38,7 @@
 ### ADS-LD Output File: '.\Obj\图像采集.axf'
 ### ADS-LD Command File: '.\Obj\图像采集.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\Obj\图像采集.lnp', Handle=0x00000420
+### Creating CmdFile '.\Obj\图像采集.lnp', Handle=0x000007C4
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\Obj\图像采集.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

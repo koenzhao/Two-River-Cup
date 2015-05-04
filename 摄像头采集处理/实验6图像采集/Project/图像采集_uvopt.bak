@@ -156,24 +156,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>667</LineNumber>
+          <LineNumber>475</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>OV7670.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>370</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134224536</Address>
+          <Address>134224914</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
@@ -181,59 +166,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename></Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\________\OV7670\370</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>28</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134218004</Address>
-          <ByteObject>0</ByteObject>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename></Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\________\Application\28</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>31</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134218008</Address>
-          <ByteObject>0</ByteObject>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename></Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\________\Application\31</Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
-          <Type>0</Type>
-          <LineNumber>514</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134225284</Address>
-          <ByteObject>0</ByteObject>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename></Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\________\OV7670\514</Expression>
+          <Expression>\\________\OV7670\475</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>PIC[i][j],0x0A</ItemText>
+          <ItemText>Curve_Value,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <DebugFlag>
@@ -278,10 +218,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>38</ColumnNumber>
+      <ColumnNumber>3</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>19</TopLine>
-      <CurrentLine>19</CurrentLine>
+      <TopLine>13</TopLine>
+      <CurrentLine>32</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\Application.c</PathWithFileName>
       <FilenameWithoutPath>Application.c</FilenameWithoutPath>
@@ -614,10 +554,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>38</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>9</TopLine>
-      <CurrentLine>17</CurrentLine>
+      <TopLine>365</TopLine>
+      <CurrentLine>379</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\bsp\OV7670.c</PathWithFileName>
       <FilenameWithoutPath>OV7670.c</FilenameWithoutPath>
@@ -762,7 +702,7 @@
 
   <AlienFiles>
     <PathWithFilename>E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\User\bsp\OV7670.h</PathWithFilename>
-    <TopLine>108</TopLine>
+    <TopLine>97</TopLine>
     <CurrentLine>116</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
@@ -791,7 +731,7 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>4</ActiveTab>
+      <ActiveTab>3</ActiveTab>
       <Documents>
         <Doc>
           <Name>..\User\bsp\I2C.c</Name>
@@ -801,8 +741,8 @@
         </Doc>
         <Doc>
           <Name>..\User\bsp\OV7670.h</Name>
-          <ColumnNumber>2</ColumnNumber>
-          <TopLine>108</TopLine>
+          <ColumnNumber>7</ColumnNumber>
+          <TopLine>97</TopLine>
           <CurrentLine>116</CurrentLine>
         </Doc>
         <Doc>
@@ -813,15 +753,15 @@
         </Doc>
         <Doc>
           <Name>..\User\Application.c</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>19</TopLine>
-          <CurrentLine>19</CurrentLine>
+          <ColumnNumber>3</ColumnNumber>
+          <TopLine>13</TopLine>
+          <CurrentLine>32</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\OV7670.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>9</TopLine>
-          <CurrentLine>17</CurrentLine>
+          <ColumnNumber>38</ColumnNumber>
+          <TopLine>365</TopLine>
+          <CurrentLine>379</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\USART.c</Name>

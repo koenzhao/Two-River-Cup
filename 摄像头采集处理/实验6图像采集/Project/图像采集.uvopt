@@ -218,10 +218,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>3</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>32</CurrentLine>
+      <TopLine>19</TopLine>
+      <CurrentLine>31</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\Application.c</PathWithFileName>
       <FilenameWithoutPath>Application.c</FilenameWithoutPath>
@@ -554,10 +554,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>38</ColumnNumber>
+      <ColumnNumber>26</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>365</TopLine>
-      <CurrentLine>379</CurrentLine>
+      <TopLine>460</TopLine>
+      <CurrentLine>475</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\bsp\OV7670.c</PathWithFileName>
       <FilenameWithoutPath>OV7670.c</FilenameWithoutPath>
@@ -703,7 +703,7 @@
   <AlienFiles>
     <PathWithFilename>E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\User\bsp\OV7670.h</PathWithFilename>
     <TopLine>97</TopLine>
-    <CurrentLine>116</CurrentLine>
+    <CurrentLine>108</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -741,9 +741,9 @@
         </Doc>
         <Doc>
           <Name>..\User\bsp\OV7670.h</Name>
-          <ColumnNumber>7</ColumnNumber>
+          <ColumnNumber>42</ColumnNumber>
           <TopLine>97</TopLine>
-          <CurrentLine>116</CurrentLine>
+          <CurrentLine>108</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\main.c</Name>
@@ -753,15 +753,15 @@
         </Doc>
         <Doc>
           <Name>..\User\Application.c</Name>
-          <ColumnNumber>3</ColumnNumber>
-          <TopLine>13</TopLine>
-          <CurrentLine>32</CurrentLine>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>19</TopLine>
+          <CurrentLine>31</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\OV7670.c</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>365</TopLine>
-          <CurrentLine>379</CurrentLine>
+          <ColumnNumber>26</ColumnNumber>
+          <TopLine>460</TopLine>
+          <CurrentLine>475</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\USART.c</Name>
