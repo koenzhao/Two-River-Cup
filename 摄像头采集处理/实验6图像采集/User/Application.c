@@ -29,6 +29,7 @@ void Application(void)
 
 			//通过串口发送图片信息
 			//Send_Pic();
+			//Send_MidLine();
 			USART_SendData(USART1,Curve_Value);
 			
 			//状态转移

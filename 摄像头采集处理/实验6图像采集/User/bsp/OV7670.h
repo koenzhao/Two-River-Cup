@@ -105,15 +105,18 @@ void Get_MidLine(void);
 void Get_MidLine(void);
 void SmoothMid(void);
 void Least_Squares(int start, int end);
-uint8_t Curve(uint8_t start, uint8_t end);
+int16_t Curve(uint8_t start, uint8_t end);
+int8_t Differ_Value(void);
 int8_t Abs8(int8_t a);
 void TwoValue_Process(void);
+void Display_MidLine(void);
+void Send_MidLine(void);
 
 #define ADDR_OV7670   0x42	 
 extern uint8_t PIC[R][C];
 extern uint8_t PIC_Smooth[R][C];
 extern uint8_t PIC_Outline[R][C];
-extern uint8_t Curve_Value;
+extern int8_t Curve_Value;
 
 
 typedef enum{

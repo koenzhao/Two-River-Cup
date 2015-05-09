@@ -7,46 +7,6 @@ E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\图像采集.uvproj
 Project File Date:  04/29/2015
 
 <h2>Output:</h2>
-Build target '图像采集'
-linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-compiling Application.c...
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-**JLink Warning: RESET (pin 15) high, but should be low. Please check target hardware.
-**JLink Warning: CPU core not found.
-**JLink Warning: RESET (pin 15) high, but should be low. Please check target hardware.
-***JLink Error: Supply voltage too low (1 Volt is required, Measured: 0.0 Volt).
-Please check target power.
-Wrong AHB ID (15:3). Expected 0x04770001 (Mask 0x0FFFFF0F), Found 0x00000000
 Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
 Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
  
@@ -66,7 +26,7 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RB
-VTarget = 3.287V
+VTarget = 3.267V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -85,17 +45,12 @@ Build target '图像采集'
 compiling OV7670.c...
 ..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
 linking...
-Program Size: Code=9988 RO-data=268 RW-data=100 ZI-data=7588  
+Program Size: Code=10176 RO-data=268 RW-data=100 ZI-data=7588  
 FromELF: creating hex file...
 ".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
 Build target '图像采集'
 linking...
-Program Size: Code=9988 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=9988 RO-data=268 RW-data=100 ZI-data=7588  
+Program Size: Code=10176 RO-data=268 RW-data=100 ZI-data=7588  
 FromELF: creating hex file...
 ".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
 Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
@@ -117,7 +72,551 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RB
-VTarget = 3.280V
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling OV7670.c...
+..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
+linking...
+Program Size: Code=10204 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10204 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10208 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10184 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10204 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10204 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+compiling OV7670.c...
+..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
+linking...
+Program Size: Code=10172 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling OV7670.c...
+..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling OV7670.c...
+..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Build target '图像采集'
+compiling OV7670.c...
+..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10176 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling OV7670.c...
+..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
+Build target '图像采集'
+linking...
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target '图像采集'
+compiling Application.c...
+linking...
+Program Size: Code=10176 RO-data=268 RW-data=100 ZI-data=7588  
+FromELF: creating hex file...
+".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
+Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103RB
+VTarget = 3.261V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -135,12 +634,7 @@ Application running ...
 Build target '图像采集'
 compiling Application.c...
 linking...
-Program Size: Code=9984 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=9984 RO-data=268 RW-data=100 ZI-data=7588  
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
 FromELF: creating hex file...
 ".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
 Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
@@ -162,385 +656,7 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RB
-VTarget = 3.280V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling Application.c...
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-..\User\bsp\OV7670.c(467): warning:  #177-D: variable "start" was declared but never referenced
-linking...
-Program Size: Code=9932 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 2 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.280V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-..\User\bsp\OV7670.c(467): warning:  #177-D: variable "start" was declared but never referenced
-linking...
-Program Size: Code=9948 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 2 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=9948 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.287V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling Application.c...
-compiling main.c...
-compiling stm32f10x_it.c...
-compiling misc.c...
-compiling stm32f10x_adc.c...
-compiling stm32f10x_dma.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_fsmc.c...
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_i2c.c...
-compiling stm32f10x_pwr.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_rtc.c...
-compiling stm32f10x_sdio.c...
-compiling stm32f10x_spi.c...
-compiling stm32f10x_tim.c...
-compiling stm32f10x_usart.c...
-compiling stm32f10x_wwdg.c...
-compiling core_cm3.c...
-compiling system_stm32f10x.c...
-assembling startup_stm32f10x_md.s...
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-..\User\bsp\OV7670.c(467): warning:  #177-D: variable "start" was declared but never referenced
-compiling I2C.c...
-compiling delay.c...
-compiling USART.c...
-compiling EXIT.c...
-compiling KEY.c...
-compiling LED.c...
-linking...
-Program Size: Code=9952 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 2 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.287V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-..\User\bsp\OV7670.c(467): warning:  #177-D: variable "start" was declared but never referenced
-linking...
-Program Size: Code=9932 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 2 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.287V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.280V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling Application.c...
-linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.293V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling Application.c...
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.293V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          0
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling Application.c...
-linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.287V
+VTarget = 3.267V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -557,13 +673,7 @@ Verify OK.
 Application running ...
 Build target '图像采集'
 linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-compiling Application.c...
-linking...
-Program Size: Code=9992 RO-data=268 RW-data=100 ZI-data=7588  
+Program Size: Code=10196 RO-data=268 RW-data=100 ZI-data=7588  
 FromELF: creating hex file...
 ".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
 Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
@@ -585,47 +695,7 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RB
-VTarget = 3.293V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 2048
-Watchpoints:          4
-JTAG speed: 2000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Build target '图像采集'
-compiling Application.c...
-linking...
-Program Size: Code=10008 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\Git\\Two-River-Cup\\摄像头采集处理\\实验6图像采集\\Project\\Obj\\图像采集.AXF" 
-Set JLink Project File to "E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\Project\JLinkSettings.ini"
- 
-JLink info:
-------------
-DLL: V4.20p, compiled Nov 19 2010 15:55:07
-Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
-Hardware: V8.00
-S/N : 17935099 
-Feature(s) : RDI,FlashDL,FlashBP,JFlash 
- 
-* JLink Info: Found SWD-DP with ID 0x1BA01477
-* JLink Info: TPIU fitted.
-* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: STM32F103RB
-VTarget = 3.293V
+VTarget = 3.261V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -640,60 +710,3 @@ Verify OK.
 * JLink Info: TPIU fitted.
 * JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
-Build target '图像采集'
-compiling Application.c...
-compiling main.c...
-compiling stm32f10x_it.c...
-compiling OV7670.c...
-..\User\bsp\OV7670.c(309): warning:  #550-D: variable "t2" was set but never used
-compiling I2C.c...
-compiling delay.c...
-compiling USART.c...
-compiling EXIT.c...
-compiling KEY.c...
-compiling LED.c...
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 1 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-compiling Application.c...
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).
-Build target '图像采集'
-linking...
-Program Size: Code=10020 RO-data=268 RW-data=100 ZI-data=7588  
-FromELF: creating hex file...
-".\Obj\图像采集.axf" - 0 Error(s), 0 Warning(s).

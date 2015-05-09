@@ -156,17 +156,17 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>475</LineNumber>
+          <LineNumber>869</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134224914</Address>
+          <Address>134223836</Address>
           <ByteObject>0</ByteObject>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename></Filename>
+          <Filename>OV7670.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\________\OV7670\475</Expression>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -174,6 +174,16 @@
           <count>0</count>
           <WinNumber>1</WinNumber>
           <ItemText>Curve_Value,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Mid_Line,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>differ,0x10</ItemText>
         </Ww>
       </WatchWindow1>
       <DebugFlag>
@@ -218,10 +228,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>5</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>19</TopLine>
-      <CurrentLine>31</CurrentLine>
+      <TopLine>17</TopLine>
+      <CurrentLine>27</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\Application.c</PathWithFileName>
       <FilenameWithoutPath>Application.c</FilenameWithoutPath>
@@ -246,10 +256,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>204</TopLine>
-      <CurrentLine>208</CurrentLine>
+      <TopLine>71</TopLine>
+      <CurrentLine>71</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -463,10 +473,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>586</TopLine>
+      <CurrentLine>592</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_usart.c</FilenameWithoutPath>
@@ -554,10 +564,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>26</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>460</TopLine>
-      <CurrentLine>475</CurrentLine>
+      <TopLine>854</TopLine>
+      <CurrentLine>871</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\bsp\OV7670.c</PathWithFileName>
       <FilenameWithoutPath>OV7670.c</FilenameWithoutPath>
@@ -650,8 +660,8 @@
 
   <AlienFiles>
     <PathWithFilename>C:\Keil\ARM\RV31\INC\stdint.h</PathWithFilename>
-    <TopLine>45</TopLine>
-    <CurrentLine>45</CurrentLine>
+    <TopLine>34</TopLine>
+    <CurrentLine>43</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -677,7 +687,7 @@
   <AlienFiles>
     <PathWithFilename>E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\User\includes.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>15</CurrentLine>
+    <CurrentLine>1</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -702,8 +712,8 @@
 
   <AlienFiles>
     <PathWithFilename>E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\User\bsp\OV7670.h</PathWithFilename>
-    <TopLine>97</TopLine>
-    <CurrentLine>108</CurrentLine>
+    <TopLine>89</TopLine>
+    <CurrentLine>89</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -731,8 +741,20 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>3</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>..\User\bsp\OV7670.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>854</TopLine>
+          <CurrentLine>871</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\User\stm32f10x_it.c</Name>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>71</TopLine>
+          <CurrentLine>71</CurrentLine>
+        </Doc>
         <Doc>
           <Name>..\User\bsp\I2C.c</Name>
           <ColumnNumber>38</ColumnNumber>
@@ -741,9 +763,9 @@
         </Doc>
         <Doc>
           <Name>..\User\bsp\OV7670.h</Name>
-          <ColumnNumber>42</ColumnNumber>
-          <TopLine>97</TopLine>
-          <CurrentLine>108</CurrentLine>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>89</TopLine>
+          <CurrentLine>89</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\main.c</Name>
@@ -753,15 +775,9 @@
         </Doc>
         <Doc>
           <Name>..\User\Application.c</Name>
-          <ColumnNumber>5</ColumnNumber>
-          <TopLine>19</TopLine>
-          <CurrentLine>31</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\User\bsp\OV7670.c</Name>
-          <ColumnNumber>26</ColumnNumber>
-          <TopLine>460</TopLine>
-          <CurrentLine>475</CurrentLine>
+          <ColumnNumber>12</ColumnNumber>
+          <TopLine>17</TopLine>
+          <CurrentLine>27</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\USART.c</Name>
@@ -773,7 +789,7 @@
           <Name>..\User\includes.h</Name>
           <ColumnNumber>9</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>15</CurrentLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\EXIT.c</Name>
@@ -784,8 +800,14 @@
         <Doc>
           <Name>C:\Keil\ARM\RV31\INC\stdint.h</Name>
           <ColumnNumber>31</ColumnNumber>
-          <TopLine>45</TopLine>
-          <CurrentLine>45</CurrentLine>
+          <TopLine>34</TopLine>
+          <CurrentLine>43</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>586</TopLine>
+          <CurrentLine>592</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

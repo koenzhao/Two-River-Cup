@@ -309,10 +309,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>33</ColumnNumber>
+      <ColumnNumber>63</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>154</TopLine>
-      <CurrentLine>173</CurrentLine>
+      <TopLine>194</TopLine>
+      <CurrentLine>194</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\jiaodu.c</PathWithFileName>
       <FilenameWithoutPath>jiaodu.c</FilenameWithoutPath>
@@ -325,8 +325,8 @@
       <Focus>0</Focus>
       <ColumnNumber>4</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>93</TopLine>
-      <CurrentLine>108</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\encoder.c</PathWithFileName>
       <FilenameWithoutPath>encoder.c</FilenameWithoutPath>
@@ -523,7 +523,7 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>E:\Git\Two-River-Cup\底板程序\User\jiaodu.h</PathWithFilename>
+    <PathWithFilename>E:\Git\Two-River-Cup\底板程序\User\Usart.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>11</CurrentLine>
     <Constant>0</Constant>
@@ -575,7 +575,7 @@
   </AlienFiles>
 
   <AlienFiles>
-    <PathWithFilename>E:\Git\Two-River-Cup\底板程序\User\Usart.h</PathWithFilename>
+    <PathWithFilename>E:\Git\Two-River-Cup\底板程序\User\jiaodu.h</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>11</CurrentLine>
     <Constant>0</Constant>
@@ -605,7 +605,7 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>3</ActiveTab>
+      <ActiveTab>5</ActiveTab>
       <Documents>
         <Doc>
           <Name>..\User\main.c</Name>
@@ -628,8 +628,8 @@
         <Doc>
           <Name>..\User\encoder.c</Name>
           <ColumnNumber>4</ColumnNumber>
-          <TopLine>93</TopLine>
-          <CurrentLine>108</CurrentLine>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\Usart.c</Name>
@@ -639,9 +639,9 @@
         </Doc>
         <Doc>
           <Name>..\User\jiaodu.c</Name>
-          <ColumnNumber>33</ColumnNumber>
-          <TopLine>154</TopLine>
-          <CurrentLine>173</CurrentLine>
+          <ColumnNumber>63</ColumnNumber>
+          <TopLine>194</TopLine>
+          <CurrentLine>194</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\system_stm32f10x.c</Name>

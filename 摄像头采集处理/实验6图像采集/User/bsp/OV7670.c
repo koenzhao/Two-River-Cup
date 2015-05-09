@@ -14,7 +14,7 @@ int left,right,data_last,data;
 int left_flag,right_flag;
 int Threshold = 100;
 uint8_t y[R]={80};
-uint8_t Curve_Value = 0;
+int8_t Curve_Value = 0;
 
 
 /*
@@ -457,7 +457,7 @@ void Send_Pic(void)
 
 /****************************************************************************
 函数名：PIC_Process()
-功能：二值化，滤波
+功能：对PIC图像做处理
 备注：2015年4月26日赵冬阳添加
 ****************************************************************************/
 
@@ -472,7 +472,9 @@ void PIC_Process()
 	{
 		Least_Squares(start, end);
 	}
-	Curve_Value = Curve(10,30);
+	//Curve_Value = Curve(10,30);
+	Curve_Value = Differ_Value();
+	//Curve_Value = 1;
 	Display_MidLine();
 }
 
@@ -523,7 +525,7 @@ void TwoValue_Process(void)
 void Display_MidLine()
 {
 	int row;
-	for (row=R-1;row>=0;row--)
+	for (row=R-1;row>0;row--)
 	{
 		PIC[row][Mid_Line[row]]=black;
 	}
@@ -540,14 +542,15 @@ void Display_MidLine()
 *********************************************************************/
 void Get_MidLine()
 {
-	int row = 0;
-	int col = 0;
-	int Left_Border = 0;
-	int Right_Border = 0;
-	short int Left_Find = 0;
-	short int Right_Find = 0;
+	uint8_t row = 0;
+	//int col = 0;
+	uint8_t Left_Border[R] = {0};
+	uint8_t Right_Border[R] = {0};
+	uint8_t Last_Mid_Line_1 = 80;
+	uint8_t Last_Mid_Line_2 = 80;
+	uint8_t Mid_Scan = 80;
 
-	for(row=R-1;row>=0;row--)
+	/*for(row=R-1;row>=0;row--)
 	{
 		if(row>=30)//前10行处理
 		{
@@ -577,7 +580,7 @@ void Get_MidLine()
 			if(Right_Find == 0)
 				Right_Border = 160;
 		}
-		else	//后30行处理
+		else  	//中间24行处理
 		{
 			for(col=79;col>=0;col--)
 			{
@@ -608,6 +611,49 @@ void Get_MidLine()
 		Mid_Line[row]=(Left_Border+Right_Border)/2;
 		Left_Find = 0;
 		Right_Find = 0;
+	}*/
+
+	
+	Mid_Line[R-1]=((Last_Mid_Line_1+Last_Mid_Line_2)/2);
+	for (row=R-2;row>1&&C!=1;row--) //这是行
+    { 	
+		//向左扫描
+        for(Mid_Scan=Mid_Line[row+1];Mid_Scan>2;Mid_Scan--) //从i+1行的中点位置 循环一次 左移一次进行扫描
+		{
+			if(PIC[row][Mid_Scan]==black)//如果在 扫描过程中遇到黑点,那么就停止此行的扫描  要多判断几个点
+			{
+				Left_Border[row]=Mid_Scan--;//记录i行左边界的位置
+				if(PIC[row][Mid_Scan]==black) //确认下一列也是黑点
+				{
+					Mid_Scan=1;//结束此次循环 扫描下一行	
+				}
+			}
+			else
+			{
+				//如果没有检测到黑点，那么此行的中点位置记为 1
+				Left_Border[row]=1;
+			}  		 
+		} 	
+		//向右扫描
+		for (Mid_Scan=Mid_Line[row+1];Mid_Scan<C-3;Mid_Scan++)
+        {
+        	if (PIC[row][Mid_Scan]==black)	//找到了右边边界
+            {               
+                Right_Border[row]=Mid_Scan++; //记录i行右边界的位置
+				if(PIC[row][Mid_Scan]==black)
+				{
+					Mid_Scan=C-1;//结束此次循环 扫描下一行	
+				}
+				               
+			}
+			else
+			{
+			 	Right_Border[row]=C-1;//如果没有检测到右边界或者 检测结束也没有发现黑线，那么
+			}
+      	}
+       	//左右黑线边界确定之后计算中点，第i行的中点
+		Mid_Line[row]=((Left_Border[row]+Right_Border[row]))/2;
+        //左右边线采集结束，开始逻辑处理，易错，小心！！！ 以上的部分代码安全
 	}
 }
 
@@ -786,17 +832,17 @@ void Least_Squares(int start, int end)
 
 /*****************************************************************
 函数名：Curve(void)
-功能：计算曲率半径
+功能：计算线段的弯曲程度
 输入：无
 输出：curve_MidLine
 备注：2015年5月4日添加
 *****************************************************************/
-uint8_t Curve(uint8_t start, uint8_t end)
+int16_t Curve(uint8_t start, uint8_t end)
 {
 	int8_t i;
 	uint8_t sum_MidLine=0;
 	uint8_t average_MidLine=0;
-	uint8_t curve_MidLine=0;
+	int16_t curve_MidLine=0;
 	uint8_t differ_MidLine=0;
 	for(i=end, sum_MidLine=0; i>=start; i--)
 	{
@@ -811,6 +857,45 @@ uint8_t Curve(uint8_t start, uint8_t end)
 	return curve_MidLine;
 }
 
+/*******************************************************
+函数名：uint8_t Differ_Value()
+功能：计算中线第4行与第29行的差值
+输入：无
+输出：differ
+*******************************************************/
+int8_t Differ_Value()
+{
+	int8_t differ = 0;
+	differ = Mid_Line[15] - Mid_Line[20];
+	return differ;
+}
+
+/*********************************************************
+函数名：void Send_MidLine()
+功能：以16进制形式传回中心线数据，调试时使用
+备注：2015年5月3日添加
+*********************************************************/
+void Send_MidLine()
+{
+	int8_t row = 0;
+	USART_ClearFlag(USART1, USART_FLAG_TC); 
+	USART_SendData(USART1,0x00);
+  	while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+	USART_SendData(USART1,0xff);
+  	while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+	USART_SendData(USART1,0x01);
+  	while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+	USART_SendData(USART1,0x00);
+  	while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+	
+	for(row=R-1;row>=3;row--)
+	{
+		USART_ClearFlag(USART1, USART_FLAG_TC); 
+		USART_SendData(USART1,Mid_Line[row]);
+		while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+	}
+
+}
 /*******************************************************
 函数名：int Get_GrayValue()
 输入：无；

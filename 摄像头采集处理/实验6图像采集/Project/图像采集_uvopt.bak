@@ -152,23 +152,6 @@
           <Name>-U17935099 -O78 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(4) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO15 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL020000</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>475</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134224914</Address>
-          <ByteObject>0</ByteObject>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename></Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\________\OV7670\475</Expression>
-        </Bp>
-      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -218,10 +201,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>3</ColumnNumber>
+      <ColumnNumber>11</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>32</CurrentLine>
+      <TopLine>14</TopLine>
+      <CurrentLine>14</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\Application.c</PathWithFileName>
       <FilenameWithoutPath>Application.c</FilenameWithoutPath>
@@ -246,10 +229,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>204</TopLine>
-      <CurrentLine>208</CurrentLine>
+      <TopLine>56</TopLine>
+      <CurrentLine>62</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -463,10 +446,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>5</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>586</TopLine>
+      <CurrentLine>592</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_usart.c</FilenameWithoutPath>
@@ -554,10 +537,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>38</ColumnNumber>
+      <ColumnNumber>9</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>365</TopLine>
-      <CurrentLine>379</CurrentLine>
+      <TopLine>612</TopLine>
+      <CurrentLine>616</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\bsp\OV7670.c</PathWithFileName>
       <FilenameWithoutPath>OV7670.c</FilenameWithoutPath>
@@ -650,8 +633,8 @@
 
   <AlienFiles>
     <PathWithFilename>C:\Keil\ARM\RV31\INC\stdint.h</PathWithFilename>
-    <TopLine>45</TopLine>
-    <CurrentLine>45</CurrentLine>
+    <TopLine>34</TopLine>
+    <CurrentLine>43</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -677,7 +660,7 @@
   <AlienFiles>
     <PathWithFilename>E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\User\includes.h</PathWithFilename>
     <TopLine>1</TopLine>
-    <CurrentLine>15</CurrentLine>
+    <CurrentLine>1</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -702,8 +685,8 @@
 
   <AlienFiles>
     <PathWithFilename>E:\Git\Two-River-Cup\摄像头采集处理\实验6图像采集\User\bsp\OV7670.h</PathWithFilename>
-    <TopLine>97</TopLine>
-    <CurrentLine>116</CurrentLine>
+    <TopLine>89</TopLine>
+    <CurrentLine>89</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -731,8 +714,20 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>3</ActiveTab>
+      <ActiveTab>1</ActiveTab>
       <Documents>
+        <Doc>
+          <Name>..\User\bsp\OV7670.c</Name>
+          <ColumnNumber>9</ColumnNumber>
+          <TopLine>612</TopLine>
+          <CurrentLine>616</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\User\stm32f10x_it.c</Name>
+          <ColumnNumber>15</ColumnNumber>
+          <TopLine>56</TopLine>
+          <CurrentLine>62</CurrentLine>
+        </Doc>
         <Doc>
           <Name>..\User\bsp\I2C.c</Name>
           <ColumnNumber>38</ColumnNumber>
@@ -741,9 +736,9 @@
         </Doc>
         <Doc>
           <Name>..\User\bsp\OV7670.h</Name>
-          <ColumnNumber>7</ColumnNumber>
-          <TopLine>97</TopLine>
-          <CurrentLine>116</CurrentLine>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>89</TopLine>
+          <CurrentLine>89</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\main.c</Name>
@@ -753,15 +748,9 @@
         </Doc>
         <Doc>
           <Name>..\User\Application.c</Name>
-          <ColumnNumber>3</ColumnNumber>
-          <TopLine>13</TopLine>
-          <CurrentLine>32</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>..\User\bsp\OV7670.c</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>365</TopLine>
-          <CurrentLine>379</CurrentLine>
+          <ColumnNumber>11</ColumnNumber>
+          <TopLine>14</TopLine>
+          <CurrentLine>14</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\USART.c</Name>
@@ -773,7 +762,7 @@
           <Name>..\User\includes.h</Name>
           <ColumnNumber>9</ColumnNumber>
           <TopLine>1</TopLine>
-          <CurrentLine>15</CurrentLine>
+          <CurrentLine>1</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\User\bsp\EXIT.c</Name>
@@ -784,8 +773,14 @@
         <Doc>
           <Name>C:\Keil\ARM\RV31\INC\stdint.h</Name>
           <ColumnNumber>31</ColumnNumber>
-          <TopLine>45</TopLine>
-          <CurrentLine>45</CurrentLine>
+          <TopLine>34</TopLine>
+          <CurrentLine>43</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</Name>
+          <ColumnNumber>5</ColumnNumber>
+          <TopLine>586</TopLine>
+          <CurrentLine>592</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
